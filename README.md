@@ -1,53 +1,80 @@
-# System Design Mastery Portfolio
+# System Design Learning System
 
-This repository documents my structured journey toward becoming a Senior → Staff-level system design engineer.
+An artifact-driven learning system for building real architectural thinking, powered by [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
-The goal is not interview pattern memorization.
+## Who This Is For
 
-The goal is deep architectural understanding.
+Engineers at any level who want to develop genuine system design skills for their career — not memorize interview patterns. Whether you're a junior engineer encountering distributed systems for the first time or a senior engineer sharpening your architectural judgment, this system adapts to your level.
 
----
+## How It Works
 
-## 🎯 Objective
+Instead of reading passively, you learn by creating artifacts: design documents, tradeoff analyses, architecture reviews, and decision records. Each artifact lives in this repo, building a personal knowledge base over time.
 
-Over time, I am intentionally rebuilding and deepening my knowledge in:
+Claude Code acts as a patient, rigorous mentor who:
+- Starts from first principles and builds up
+- Teaches at three levels: intuition, mechanics, and failure
+- Makes tradeoffs explicit
+- Never gives you happy-path-only answers
+- Adapts to your current understanding
 
-- Distributed systems fundamentals
-- Scalability patterns
-- Data system design
-- Failure modeling
-- Tradeoff reasoning
-- Observability and operability
-- Long-term system evolution
+## Getting Started
 
-This repository serves as both:
+1. Clone this repo
+2. Install [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
+3. Run `claude` from the repo root
+4. Type `/roadmap` to generate your personalized learning plan
+5. Start learning with `/deep-dive [topic]`
 
-1. A public artifact of my learning
-2. A long-term architectural reference library
+## Commands
 
----
+| Command | What It Does |
+|---------|-------------|
+| `/deep-dive [topic]` | Three-level topic study (intuition → mechanics → failure) |
+| `/explain [concept]` | Quick, jargon-free explanation (conversational, no file) |
+| `/design [system]` | Guided production system design |
+| `/review [file]` | Staff-engineer critique of a design |
+| `/tradeoff [A vs B]` | Architectural tradeoff analysis |
+| `/adr [decision]` | Architectural Decision Record |
+| `/reflect` | Assess learning progress, identify gaps |
+| `/roadmap` | View and update your learning roadmap |
 
-## 🧠 Philosophy
+## Suggested Weekly Flow (2-3 hrs)
 
-System design is not about drawing boxes.
+**Session 1: Learn**
+- Pick a topic from your roadmap
+- Run `/deep-dive [topic]` to study it in depth
+- If you hit unfamiliar terms, use `/explain [concept]`
 
-It is about:
+**Session 2: Apply**
+- Run `/design [system]` to practice applying what you learned
+- Run `/review` on your design to develop critical thinking
+- Or run `/tradeoff [A vs B]` to sharpen decision-making
 
-- Modeling scale before it happens
-- Understanding failure before it occurs
-- Making tradeoffs explicit
-- Simplifying complexity
-- Designing for evolution, not just launch
+**Every few weeks:**
+- Run `/reflect` to assess progress and find gaps
+- Run `/roadmap` to update your plan
 
-Each project in this repository includes:
+## Philosophy
 
-- Clear problem statements
-- Functional and non-functional requirements
-- Capacity assumptions
-- Architectural diagrams (text-based)
-- Tradeoff analysis
-- Failure scenarios
-- Scaling strategies
-- Evolution over time
+- **Depth over breadth** — understand few things well rather than many things superficially
+- **Career application, not interview prep** — design, evaluate, and communicate architecture
+- **Failure-first thinking** — always ask "what breaks?"
+- **Explicit tradeoffs** — there are no universally correct answers
+- **Sustainable pace** — 2-3 hours per week, compounding over months
+- **Beginner-friendly** — no assumed knowledge, everything explained from first principles
 
-The emphasis is clarity and reasoning over complexity.
+## Repo Structure
+
+```
+system-design/
+├── CLAUDE.md          # Instructions for Claude Code
+├── README.md          # This file
+├── roadmap.md         # Your learning roadmap
+├── designs/           # System design documents
+├── adrs/              # Architectural Decision Records
+├── notes/             # Study notes and tradeoff analyses
+├── reviews/           # Architecture reviews
+└── reflections/       # Periodic learning reflections
+```
+
+Each directory contains a `_template.md` that slash commands use as the starting structure for new artifacts.

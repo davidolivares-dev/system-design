@@ -54,6 +54,41 @@ Claude Code acts as a patient, rigorous mentor who:
 - Run `/reflect` to assess progress and find gaps
 - Run `/roadmap` to update your plan
 
+## Example Learning Session
+
+Here's what a typical session looks like in practice. You open a terminal, run `claude`, and interact using slash commands:
+
+```
+> /roadmap
+# Claude reads your roadmap, suggests "consistent hashing" as your next topic.
+
+> /explain consistent hashing
+# Not sure what that even is? Claude gives you a quick, jargon-free
+# explanation with an analogy. No file created — just a fast answer.
+
+> /deep-dive consistent hashing
+# Ready to go deeper. Claude walks you through the concept at three levels:
+# intuition (mental model), mechanics (how it works), and failure (what breaks).
+# Writes a study note to notes/2026-02-20-consistent-hashing.md
+
+> /design distributed cache
+# Apply what you learned. Claude guides you through designing a system
+# that uses consistent hashing, making tradeoffs explicit along the way.
+# Writes a design doc to designs/2026-02-20-distributed-cache.md
+
+> /review designs/2026-02-20-distributed-cache.md
+# Claude reviews your design like a staff engineer — finds scalability risks,
+# missing failure modes, and over-engineering. Constructive but direct.
+# Writes a review to reviews/2026-02-20-review-distributed-cache.md
+
+> /reflect
+# After a few sessions, Claude reviews all your recent artifacts,
+# assesses your understanding, identifies gaps, and suggests next steps.
+# Writes a reflection to reflections/2026-02-20-reflection.md
+```
+
+Each command builds on the last, and every artifact stays in the repo as a reference you can revisit.
+
 ## Philosophy
 
 - **Depth over breadth** — understand few things well rather than many things superficially
